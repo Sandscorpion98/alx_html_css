@@ -7,7 +7,7 @@ It Contains :
 
 A Header
 
-A Landing Page
+A Landing Page Section
 
 A What We Do Section
 

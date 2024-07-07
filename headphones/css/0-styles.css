@@ -1,0 +1,610 @@
+* {
+    --webkit-box-sizing: border-box;
+    --moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Small Screens */
+@media (min-width: 768px){
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium Screens */
+@media (min-width: 992px){
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* ======================================================================================================================= */
+
+header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    position: relative;
+    min-height: 56px;
+}
+header .container a img {
+    width: 160px;
+}
+
+header .container nav {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .container nav .toggle-menu {
+    font-size: 22px;
+    color: white;
+}
+
+@media(min-width:481px){
+    header .container nav .toggle-menu {
+        display: none;
+    }
+}
+
+header .container nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media(max-width:480px){
+    header .container nav ul {
+        display: none;
+    }
+
+    header .container nav .toggle-menu:hover + ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+    }
+}
+
+header .container nav li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    padding: 20px 15px;
+}
+
+header .container nav ul li a:hover {
+    color: #FF6565;
+}
+
+/* ====================================================================================================================== */
+
+main .landing {
+    background-image: url(../images/headphones_hero_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+main .landing p {
+    color: white;
+    text-align: center;
+}
+
+main .landing h1 {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+main .landing .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    max-width: 1000px;
+}
+@media(max-width:480px){
+    main .landing .content {
+        padding: 10px;
+        width: 100%;
+    }
+    main .landing .content h1 {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+}
+
+main .landing .content button {
+       margin-top: 50px;
+       margin-bottom: 50px;
+       width: 190px;
+       padding: 16px;
+       text-align: center;
+       border: 1px solid #FF6565;
+       border-radius: 35px;
+       background-color: #FF6565;
+       color: white;
+       font-size: 16px;
+       cursor: pointer;
+}
+
+main .landing .content button:hover {
+    opacity: 0.9;
+}
+
+main .landing .content .last_p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media(min-width:481px){
+    main .landing .content .last_p {
+            max-width: 800px;
+    }
+}
+
+/* ======================================================================================================================== */
+
+main .what-we-do {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .what-we-do .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    max-width: 1000px;
+    height: 500px;
+}
+
+@media(max-width:768px){
+    main .what-we-do .container {
+        position: relative;
+        height: 100%;
+    }
+
+    
+    main .what-we-do {
+        height: 100%;
+        position: relative;
+        margin-top: 120px;
+    }
+}
+
+@media(max-width: 480px){
+    main .what-we-do .container {
+        position: relative;
+        height: 100%;
+    }
+
+    
+    main .what-we-do {
+        height: 100%;
+        position: relative;
+        margin-top: 120px;
+    }
+}
+
+main .what-we-do .text {
+    width: 637px;
+    height: 184px;
+}
+
+main .what-we-do .text h2 {
+    margin-bottom: 50px;
+    font-size: 32px;
+    line-height: 37.5px;
+}
+
+main .what-we-do .text p {
+    line-height: 26px;
+    font-size: 16px;
+}
+
+main .what-we-do .container .cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1002px;
+    height: 193px;
+}
+
+@media(max-width:768px){
+    main .what-we-do .container .cards {
+        max-width: 472px;
+        min-height: 469px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 25px;
+    }
+}
+
+@media(max-width: 480px){
+    main .what-we-do .container .cards {
+        max-width: 207px;
+        min-height: 1020px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: relative;
+        margin-top: 160px;
+    }
+
+    main .what-we-do .text {
+        max-width: 325px;
+        max-height: 288px;
+        margin-top: -50px;
+    }
+}
+
+main .what-we-do .container .cards div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 207px;
+    height: 193px;
+}
+
+main .what-we-do .container .cards div:hover {
+    background-color: #deacf3;
+    border: 2px solid #05b905;
+} 
+
+main .what-we-do .container .cards div img {
+    height: 65.36px;
+}
+
+main .what-we-do .container .cards div p {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+/* ============================================================================================================================= */
+
+main .our-results {
+    background-image: url(../images/headphones_hero_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+main .our-results .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    max-width: 1000px;
+    height: 500px;
+}
+
+@media(max-width:768px){
+    main .our-results .container {
+        position: relative;
+        height: 100%;
+    }
+
+    main .our-results {
+        height: 100%;
+        position: relative;
+        margin-top: 50px;
+    }
+
+    main .our-results .text h2 {
+        margin-top: 40px;
+    }
+}
+
+@media(max-width:480px){
+    main .our-results {
+        height: 100%;
+        position: relative;
+        margin-top: 50px;
+    }
+
+    main .our-results .container {
+        position: relative;
+        height: 100%;
+        margin-top: 100px;
+    }
+}
+
+main .our-results .text {
+    width: 637px;
+    height: 184px;
+}
+
+main .our-results .text h2 {
+    margin-bottom: 50px;
+    font-size: 32px;
+    line-height: 37.5px;
+}
+
+main .our-results .text p {
+    line-height: 26px;
+    font-size: 15px;
+    height: 104px;
+}
+
+main .our-results .container .cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1002px;
+    height: 193px;
+}
+
+@media(max-width:768px){
+    main .our-results .container .cards {
+        max-width: 472px;
+        min-height: 469px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 70px;
+    }
+}
+
+@media(max-width: 480px){
+    main .our-results .container .cards {
+        max-width: 207px;
+        min-height: 1020px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: relative;
+        margin-top: 160px;
+    }
+
+    main .our-results .text {
+        max-width: 325px;
+        max-height: 288px;
+        margin-top: -50px;
+    }
+    .cards .pentagon-1 {
+        margin-top: 20px;
+    }
+}
+
+main .our-results .container .cards div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 190px;
+    height: 190px;
+    position: relative;
+}
+
+main .our-results .container .cards div .position {
+    position: absolute;
+}
+
+main .our-results .container .cards div .position h3 {
+    font-size: 46px;
+    margin-top: 15px;
+}
+
+main .our-results .container .cards div .position p {
+    margin-top:-20%;
+}
+main .our-results .container .cards div img {
+    width: 190px;
+}
+
+main .our-results .container .cards div p {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+/* ============================================================ POLYGON ==================================================== */
+.cards {
+    margin: 20px;
+    display:flex;
+    flex-wrap: wrap;
+	gap: 10px 20px;
+}
+
+.pentagon-1 {
+	position: relative;
+	width: 157.5px;
+	height: 150px;
+	background: #FF6565;
+	clip-path: polygon( 50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+}
+
+.pentagon-1:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    background-color: #19a17c;
+    color: #071629;
+}
+
+/* ========================================================================================================================= */
+
+main .contact-us {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #071629;
+}
+
+
+main .contact-us .contact {
+    width: 335px;
+    height: 373px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+main .contact-us .contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: normal;
+    width: 100%;
+}
+
+main .contact-us .contact form h2 {
+    font-size: 32px;
+    line-height: 37.5px;
+    text-align: center;
+}
+
+main .contact-us .contact form div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+main .contact-us .contact form input {
+    border-width: 0 0 1px 0;
+    border-color: transparent transparent #07162930 transparent;
+    border-style: solid;
+}
+
+main .contact-us .contact form button {
+    width: 162px;
+    height: 44px;
+    border-radius: 50px;
+    background-color: #FF6565;
+    font-size: 14px;
+    color: #ffffff;
+    border: 1px solid #FF6565;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+main .contact-us .contact form button:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* ========================================================================================================================= */
+
+footer {
+    background-color: #071629;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 249px;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .container a img {
+    width: 161px;
+}
+
+footer .container nav {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer .container nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .container nav a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 25px 15px;
+}
+
+footer .container nav ul a:hover {
+    color: #FF6565;
+}
+
+footer p {
+    margin-top: 30px;
+    color: #ffffff7a;
+}
+
+@media(max-width:480px){
+    footer .container  {
+        display: flex;
+        flex-direction: column;
+    }
+}
